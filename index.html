@@ -16,19 +16,26 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #0b1120;
+            background: #0b0f19;
             color: #ffffff;
             line-height: 1.6;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         /* NAVBAR */
+
         nav {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: rgba(11, 17, 32, 0.95);
+            padding: 18px 8%;
+            background: rgba(11, 15, 25, 0.95);
             backdrop-filter: blur(10px);
-            padding: 16px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -43,14 +50,13 @@
         }
 
         nav ul {
-            list-style: none;
             display: flex;
-            gap: 25px;
+            list-style: none;
+            gap: 28px;
         }
 
         nav ul li a {
-            text-decoration: none;
-            color: white;
+            color: #ddd;
             transition: 0.3s;
         }
 
@@ -58,10 +64,10 @@
             color: #4da6ff;
         }
 
-        /* COMMON */
+        /* GENERAL */
+
         section {
             padding: 100px 8%;
-            min-height: 80vh;
         }
 
         .section-title {
@@ -76,11 +82,12 @@
 
         .section-subtitle {
             text-align: center;
-            opacity: 0.7;
-            margin-bottom: 45px;
+            color: #aaa;
+            margin-bottom: 50px;
         }
 
         /* HERO */
+
         #home {
             min-height: 100vh;
             display: flex;
@@ -94,14 +101,13 @@
             max-width: 850px;
         }
 
-        .welcome {
+        .hero-tag {
             display: inline-block;
             padding: 8px 18px;
-            border: 1px solid rgba(77,166,255,0.4);
+            border: 1px solid rgba(77,166,255,0.5);
             border-radius: 30px;
             color: #4da6ff;
-            margin-bottom: 20px;
-            font-size: 14px;
+            margin-bottom: 25px;
         }
 
         .hero-content h1 {
@@ -113,81 +119,53 @@
             color: #4da6ff;
         }
 
-        .hero-content h2 {
-            font-size: 25px;
-            font-weight: normal;
-            opacity: 0.8;
-            margin-bottom: 20px;
-        }
-
         .hero-content p {
-            max-width: 650px;
-            margin: auto;
-            opacity: 0.75;
-            font-size: 17px;
+            font-size: 20px;
+            color: #aaa;
+            margin-bottom: 30px;
         }
 
-        .hero-buttons {
-            margin-top: 30px;
-        }
-
-        .btn {
+        .hero-btn {
             display: inline-block;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            margin: 5px;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        .btn-primary {
+            padding: 13px 28px;
             background: #4da6ff;
             color: white;
+            border-radius: 30px;
+            transition: 0.3s;
         }
 
-        .btn-primary:hover {
+        .hero-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(77,166,255,0.3);
         }
 
-        .btn-outline {
-            border: 1px solid #4da6ff;
-            color: #4da6ff;
-        }
-
-        .btn-outline:hover {
-            background: #4da6ff;
-            color: white;
-        }
-
         /* ABOUT */
-        .about-container {
-            max-width: 850px;
+
+        .about-box {
+            max-width: 900px;
             margin: auto;
+            padding: 35px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
             text-align: center;
         }
 
-        .about-container p {
-            font-size: 18px;
-            opacity: 0.8;
-            margin-bottom: 18px;
+        .about-box p {
+            color: #bbb;
+            font-size: 17px;
         }
 
         /* SKILLS */
+
         .skills-container {
             max-width: 1000px;
             margin: auto;
         }
 
-        .skills-category {
-            margin-bottom: 45px;
-        }
-
-        .skills-category h3 {
-            text-align: center;
+        .skill-group-title {
             font-size: 24px;
-            margin-bottom: 25px;
+            margin: 30px 0 20px;
             color: #4da6ff;
         }
 
@@ -203,7 +181,7 @@
             border-radius: 18px;
             padding: 25px;
             cursor: pointer;
-            transition: 0.3s ease;
+            transition: 0.3s;
             overflow: hidden;
         }
 
@@ -215,104 +193,76 @@
 
         .skill-icon {
             font-size: 35px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .skill-card h4 {
+        .skill-card h3 {
             font-size: 21px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
-        .skill-card .skill-small {
-            opacity: 0.6;
-            font-size: 13px;
+        .skill-card .skill-subtitle {
+            color: #999;
+            font-size: 14px;
         }
 
         .click-text {
-            color: #4da6ff;
-            font-size: 13px;
             margin-top: 15px;
+            color: #4da6ff;
+            font-size: 14px;
         }
 
         .skill-info {
             max-height: 0;
             overflow: hidden;
             opacity: 0;
-            transition: all 0.5s ease;
+            transition: 0.4s ease;
         }
 
         .skill-card.active .skill-info {
             max-height: 300px;
             opacity: 1;
-            margin-top: 18px;
+            margin-top: 20px;
         }
 
         .skill-info p {
+            color: #bbb;
             font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 10px;
-        }
-
-        .skill-info strong {
-            color: #4da6ff;
-        }
-
-        /* PROJECTS */
-        .projects-container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .main-project {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 22px;
-            padding: 35px;
-            margin-bottom: 35px;
-        }
-
-        .project-header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .project-badge {
-            display: inline-block;
-            padding: 7px 15px;
-            border-radius: 20px;
-            background: rgba(77,166,255,0.12);
-            color: #4da6ff;
-            font-size: 13px;
             margin-bottom: 12px;
         }
 
-        .project-header h3 {
-            font-size: 34px;
-            margin-bottom: 8px;
+        .skill-info strong {
+            color: white;
         }
 
-        .project-header p {
-            opacity: 0.7;
+        /* PROJECTS */
+
+        .projects-container {
+            max-width: 950px;
+            margin: auto;
         }
 
-        /* PROJECT STEPS */
+        .codefix-project {
+            margin-top: 40px;
+        }
+
         .project-step {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 20px;
             padding: 25px;
-            margin-bottom: 16px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 17px;
+            margin-bottom: 18px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
             cursor: pointer;
             transition: 0.3s ease;
         }
 
         .project-step:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             border-color: #4da6ff;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
         }
 
         .step-number {
@@ -324,7 +274,7 @@
             border-radius: 50%;
             background: #4da6ff;
             color: white;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: bold;
         }
 
@@ -332,138 +282,140 @@
             flex: 1;
         }
 
-        .step-content h4 {
-            font-size: 21px;
-            margin-bottom: 7px;
+        .step-content h3 {
+            margin-bottom: 8px;
+            font-size: 22px;
         }
 
         .step-content p {
-            opacity: 0.78;
-            font-size: 15px;
+            color: #bbb;
+            line-height: 1.7;
         }
 
         .step-content ul {
             padding-left: 20px;
-            opacity: 0.78;
-            margin-top: 8px;
-        }
-
-        .step-content li {
-            margin-bottom: 5px;
+            color: #bbb;
+            line-height: 1.9;
         }
 
         .step-arrow {
-            font-size: 27px;
-            opacity: 0.6;
+            font-size: 28px;
+            opacity: 0.7;
         }
 
         .hidden-step {
             display: none;
         }
 
-        .status {
-            color: #ffd54f;
-            font-weight: bold;
-            font-size: 18px;
+        .status-text {
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
-        .future {
-            color: #4da6ff;
+        .github-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #24292e;
+            border: 1px solid #555;
+            border-radius: 25px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .github-btn:hover {
+            border-color: #4da6ff;
+            transform: translateY(-2px);
         }
 
         /* OTHER PROJECT */
+
         .other-project {
+            margin-top: 40px;
+            padding: 30px;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
-            padding: 28px;
-            border-radius: 20px;
-            text-align: center;
+            border-radius: 18px;
         }
 
         .other-project h3 {
-            font-size: 25px;
-            margin-bottom: 8px;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
         .other-project p {
-            opacity: 0.75;
-            margin-bottom: 15px;
+            color: #aaa;
         }
 
         /* CONTACT */
+
         .contact-container {
-            max-width: 750px;
+            max-width: 800px;
             margin: auto;
             text-align: center;
         }
 
-        .contact-container p {
-            opacity: 0.75;
-            margin-bottom: 20px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
         }
 
-        .contact-box {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .contact-item {
-            padding: 15px 22px;
-            border-radius: 15px;
-            background: rgba(255,255,255,0.05);
+        .contact-card {
+            background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
-            cursor: pointer;
+            border-radius: 18px;
+            padding: 25px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
-        .contact-item:hover {
-            transform: translateY(-3px);
+        .contact-card:hover {
+            transform: translateY(-5px);
             border-color: #4da6ff;
         }
 
-        .contact-item button {
-            background: none;
-            border: none;
-            color: #4da6ff;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
+        .contact-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
         }
 
-        .hidden-contact {
+        .contact-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .contact-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .contact-number {
             display: none;
-        }
-
-        .phone-number {
-            margin-top: 12px;
-            font-size: 18px;
-        }
-
-        .phone-number a {
+            margin-top: 10px;
             color: #4da6ff;
-            text-decoration: none;
             font-weight: bold;
         }
 
-        .whatsapp-link {
+        .contact-card.phone.active .contact-number {
+            display: block;
+        }
+
+        .call-link {
             color: #4da6ff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
         }
 
         /* FOOTER */
+
         footer {
             text-align: center;
             padding: 30px;
             border-top: 1px solid rgba(255,255,255,0.08);
-            opacity: 0.7;
+            color: #888;
         }
 
         /* RESPONSIVE */
+
         @media (max-width: 800px) {
 
             nav {
@@ -476,60 +428,27 @@
             }
 
             section {
-                padding: 90px 5%;
+                padding: 80px 5%;
             }
 
             .hero-content h1 {
-                font-size: 42px;
-            }
-
-            .hero-content h2 {
-                font-size: 20px;
+                font-size: 40px;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
-            .main-project {
-                padding: 20px;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
 
             .project-step {
                 padding: 20px;
             }
 
-            .step-number {
-                min-width: 45px;
-                height: 45px;
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            nav ul {
-                display: none;
-            }
-
-            .hero-content h1 {
-                font-size: 35px;
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-
-            .project-header h3 {
-                font-size: 28px;
-            }
-
-            .project-step {
-                gap: 12px;
-            }
-
-            .step-content h4 {
-                font-size: 18px;
+            .step-content h3 {
+                font-size: 19px;
             }
         }
     </style>
@@ -538,6 +457,7 @@
 <body>
 
     <!-- NAVBAR -->
+
     <nav>
         <div class="logo">Laksh.</div>
 
@@ -552,11 +472,12 @@
 
 
     <!-- HOME -->
+
     <section id="home">
 
         <div class="hero-content">
 
-            <div class="welcome">
+            <div class="hero-tag">
                 👋 Welcome to my portfolio
             </div>
 
@@ -564,27 +485,13 @@
                 Hi, I'm <span>Laksh Kalantri</span>
             </h1>
 
-            <h2>
-                IT Student | Aspiring Developer | Tech Enthusiast
-            </h2>
-
             <p>
-                I'm a first-year IT engineering student exploring programming,
-                web development and new technologies. I'm focused on learning
-                by building real projects and improving my skills step by step.
+                IT Student | Aspiring Developer | Tech Enthusiast
             </p>
 
-            <div class="hero-buttons">
-
-                <a href="#projects" class="btn btn-primary">
-                    View My Projects
-                </a>
-
-                <a href="#contact" class="btn btn-outline">
-                    Contact Me
-                </a>
-
-            </div>
+            <a href="#projects" class="hero-btn">
+                Explore My Projects
+            </a>
 
         </div>
 
@@ -592,6 +499,7 @@
 
 
     <!-- ABOUT -->
+
     <section id="about">
 
         <h2 class="section-title">
@@ -599,25 +507,17 @@
         </h2>
 
         <p class="section-subtitle">
-            A little about my learning journey
+            A little about my journey
         </p>
 
-        <div class="about-container">
+        <div class="about-box">
 
             <p>
-                Hello! I'm Laksh, an IT engineering student who is currently
-                building my foundation in programming and technology.
-            </p>
-
-            <p>
-                I enjoy learning through practical projects instead of only
-                studying theory. My goal is to understand how things work,
-                build useful projects and continuously improve my skills.
-            </p>
-
-            <p>
-                I'm currently exploring web development, C programming,
-                Git & GitHub and problem-solving.
+                I am an IT Engineering student who is currently exploring
+                programming, web development and problem solving. I enjoy
+                learning new technologies and building projects that help me
+                improve my practical skills. My goal is to keep learning,
+                build useful projects and grow as a developer step by step.
             </p>
 
         </div>
@@ -626,6 +526,7 @@
 
 
     <!-- SKILLS -->
+
     <section id="skills">
 
         <h2 class="section-title">
@@ -633,136 +534,131 @@
         </h2>
 
         <p class="section-subtitle">
-            Click on any skill to explore my learning journey
+            Click on a skill to explore my learning journey
         </p>
-
 
         <div class="skills-container">
 
-            <!-- WEB DEVELOPMENT -->
-            <div class="skills-category">
+            <h3 class="skill-group-title">
+                🌐 Web Development
+            </h3>
 
-                <h3>🌐 Web Development</h3>
+            <div class="skills-grid">
 
-                <div class="skills-grid">
+                <!-- HTML -->
 
-                    <!-- HTML -->
-                    <div class="skill-card" onclick="toggleSkill(this)">
+                <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-icon">🌐</div>
+                    <div class="skill-icon">🌐</div>
 
-                        <h4>HTML</h4>
+                    <h3>HTML</h3>
 
-                        <div class="skill-small">
-                            Building the structure of websites
-                        </div>
+                    <div class="skill-subtitle">
+                        Building the structure of websites
+                    </div>
 
-                        <div class="click-text">
-                            Click to explore ↓
-                        </div>
+                    <div class="click-text">
+                        Click to explore ↓
+                    </div>
 
-                        <div class="skill-info">
+                    <div class="skill-info">
 
-                            <p>
-                                <strong>Why I'm learning it:</strong><br>
-                                HTML is the foundation of every website.
-                                I want to understand how web pages are
-                                structured from the inside.
-                            </p>
+                        <p>
+                            <strong>Why I'm learning it:</strong>
+                            HTML is the foundation of every website, so I am
+                            learning how web pages are structured.
+                        </p>
 
-                            <p>
-                                <strong>What I use it for:</strong><br>
-                                Creating pages, sections, buttons, forms
-                                and the overall structure of my websites.
-                            </p>
+                        <p>
+                            <strong>What I use it for:</strong>
+                            Creating pages, sections, buttons, forms and
+                            project layouts.
+                        </p>
 
-                            <p>
-                                <strong>What's next:</strong><br>
-                                Building more complete and interactive
-                                web projects.
-                            </p>
-
-                        </div>
+                        <p>
+                            <strong>What's next:</strong>
+                            Building more interactive and professional websites.
+                        </p>
 
                     </div>
 
+                </div>
 
-                    <!-- CSS -->
-                    <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-icon">🎨</div>
+                <!-- CSS -->
 
-                        <h4>CSS</h4>
+                <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-small">
-                            Designing and styling websites
-                        </div>
+                    <div class="skill-icon">🎨</div>
 
-                        <div class="click-text">
-                            Click to explore ↓
-                        </div>
+                    <h3>CSS</h3>
 
-                        <div class="skill-info">
+                    <div class="skill-subtitle">
+                        Designing and styling websites
+                    </div>
 
-                            <p>
-                                <strong>Why I'm learning it:</strong><br>
-                                A website should not only work but also
-                                look clean and feel easy to use.
-                            </p>
+                    <div class="click-text">
+                        Click to explore ↓
+                    </div>
 
-                            <p>
-                                <strong>What I use it for:</strong><br>
-                                Layouts, colors, buttons, animations,
-                                responsive designs and visual effects.
-                            </p>
+                    <div class="skill-info">
 
-                            <p>
-                                <strong>What's next:</strong><br>
-                                Creating more modern and responsive
-                                website designs.
-                            </p>
+                        <p>
+                            <strong>Why I'm learning it:</strong>
+                            A good website should not only work but also look
+                            clean and attractive.
+                        </p>
 
-                        </div>
+                        <p>
+                            <strong>What I use it for:</strong>
+                            Colors, layouts, animations, responsive design
+                            and modern UI.
+                        </p>
+
+                        <p>
+                            <strong>What's next:</strong>
+                            Improving responsive layouts and UI design.
+                        </p>
 
                     </div>
 
+                </div>
 
-                    <!-- JAVASCRIPT -->
-                    <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-icon">⚡</div>
+                <!-- JAVASCRIPT -->
 
-                        <h4>JavaScript</h4>
+                <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-small">
-                            Making websites interactive
-                        </div>
+                    <div class="skill-icon">⚡</div>
 
-                        <div class="click-text">
-                            Click to explore ↓
-                        </div>
+                    <h3>JavaScript</h3>
 
-                        <div class="skill-info">
+                    <div class="skill-subtitle">
+                        Adding functionality to websites
+                    </div>
 
-                            <p>
-                                <strong>Why I'm learning it:</strong><br>
-                                JavaScript allows websites to respond to
-                                user actions and become interactive.
-                            </p>
+                    <div class="click-text">
+                        Click to explore ↓
+                    </div>
 
-                            <p>
-                                <strong>What I use it for:</strong><br>
-                                Click interactions, dynamic sections,
-                                buttons and website functionality.
-                            </p>
+                    <div class="skill-info">
 
-                            <p>
-                                <strong>What's next:</strong><br>
-                                Learning APIs, more advanced JavaScript
-                                and interactive applications.
-                            </p>
+                        <p>
+                            <strong>Why I'm learning it:</strong>
+                            JavaScript makes websites interactive instead of
+                            being only static pages.
+                        </p>
 
-                        </div>
+                        <p>
+                            <strong>What I use it for:</strong>
+                            Buttons, interactions, dynamic content and
+                            small web applications.
+                        </p>
+
+                        <p>
+                            <strong>What's next:</strong>
+                            Building more practical JavaScript projects.
+                        </p>
 
                     </div>
 
@@ -771,129 +667,128 @@
             </div>
 
 
-            <!-- PROGRAMMING -->
-            <div class="skills-category">
+            <h3 class="skill-group-title">
+                💻 Programming & Tools
+            </h3>
 
-                <h3>💻 Programming & Tools</h3>
+            <div class="skills-grid">
 
-                <div class="skills-grid">
+                <!-- C -->
 
-                    <!-- C -->
-                    <div class="skill-card" onclick="toggleSkill(this)">
+                <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-icon">⚙️</div>
+                    <div class="skill-icon">🔵</div>
 
-                        <h4>C Programming</h4>
+                    <h3>C Programming</h3>
 
-                        <div class="skill-small">
-                            Building programming fundamentals
-                        </div>
+                    <div class="skill-subtitle">
+                        Learning programming fundamentals
+                    </div>
 
-                        <div class="click-text">
-                            Click to explore ↓
-                        </div>
+                    <div class="click-text">
+                        Click to explore ↓
+                    </div>
 
-                        <div class="skill-info">
+                    <div class="skill-info">
 
-                            <p>
-                                <strong>Why I'm learning it:</strong><br>
-                                C helps me understand programming fundamentals,
-                                logic and how programs work at a deeper level.
-                            </p>
+                        <p>
+                            <strong>Why I'm learning it:</strong>
+                            C helps me understand programming fundamentals,
+                            logic and how code works.
+                        </p>
 
-                            <p>
-                                <strong>What I'm learning:</strong><br>
-                                Variables, conditions, loops, functions,
-                                arrays and basic problem-solving.
-                            </p>
+                        <p>
+                            <strong>What I use it for:</strong>
+                            Practicing statements, conditions, loops,
+                            functions and basic programming problems.
+                        </p>
 
-                            <p>
-                                <strong>What's next:</strong><br>
-                                Practising more problems and building
-                                small C programs.
-                            </p>
-
-                        </div>
+                        <p>
+                            <strong>What's next:</strong>
+                            Strengthening my programming logic through
+                            regular practice.
+                        </p>
 
                     </div>
 
+                </div>
 
-                    <!-- GITHUB -->
-                    <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-icon">🐙</div>
+                <!-- GITHUB -->
 
-                        <h4>Git & GitHub</h4>
+                <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-small">
-                            Managing and sharing projects
-                        </div>
+                    <div class="skill-icon">🐙</div>
 
-                        <div class="click-text">
-                            Click to explore ↓
-                        </div>
+                    <h3>Git & GitHub</h3>
 
-                        <div class="skill-info">
+                    <div class="skill-subtitle">
+                        Managing and sharing projects
+                    </div>
 
-                            <p>
-                                <strong>Why I'm learning it:</strong><br>
-                                I want to understand how developers manage
-                                their code and collaborate on projects.
-                            </p>
+                    <div class="click-text">
+                        Click to explore ↓
+                    </div>
 
-                            <p>
-                                <strong>What I use it for:</strong><br>
-                                Storing projects, tracking changes and
-                                publishing my work online.
-                            </p>
+                    <div class="skill-info">
 
-                            <p>
-                                <strong>What's next:</strong><br>
-                                Improving my Git workflow and learning
-                                better collaboration practices.
-                            </p>
+                        <p>
+                            <strong>Why I'm learning it:</strong>
+                            GitHub helps me keep my projects organized and
+                            share my work online.
+                        </p>
 
-                        </div>
+                        <p>
+                            <strong>What I use it for:</strong>
+                            Uploading projects, updating code and maintaining
+                            my portfolio website.
+                        </p>
+
+                        <p>
+                            <strong>What's next:</strong>
+                            Learning better version control and collaboration.
+                        </p>
 
                     </div>
 
+                </div>
 
-                    <!-- PROBLEM SOLVING -->
-                    <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-icon">🧠</div>
+                <!-- PROBLEM SOLVING -->
 
-                        <h4>Problem Solving</h4>
+                <div class="skill-card" onclick="toggleSkill(this)">
 
-                        <div class="skill-small">
-                            Learning to think logically
-                        </div>
+                    <div class="skill-icon">🧠</div>
 
-                        <div class="click-text">
-                            Click to explore ↓
-                        </div>
+                    <h3>Problem Solving</h3>
 
-                        <div class="skill-info">
+                    <div class="skill-subtitle">
+                        Improving coding logic
+                    </div>
 
-                            <p>
-                                <strong>Why I'm learning it:</strong><br>
-                                Programming is not only about writing code.
-                                Understanding the problem is equally important.
-                            </p>
+                    <div class="click-text">
+                        Click to explore ↓
+                    </div>
 
-                            <p>
-                                <strong>What I practise:</strong><br>
-                                Breaking problems into smaller parts,
-                                understanding logic and finding solutions.
-                            </p>
+                    <div class="skill-info">
 
-                            <p>
-                                <strong>What's next:</strong><br>
-                                Solving more coding problems and applying
-                                logical thinking to real projects.
-                            </p>
+                        <p>
+                            <strong>Why I'm learning it:</strong>
+                            Programming is not only about writing code. It is
+                            also about understanding and solving problems.
+                        </p>
 
-                        </div>
+                        <p>
+                            <strong>What I use it for:</strong>
+                            Breaking problems into smaller steps and finding
+                            logical solutions.
+                        </p>
+
+                        <p>
+                            <strong>What's next:</strong>
+                            Solving more programming challenges and building
+                            practical projects.
+                        </p>
 
                     </div>
 
@@ -907,6 +802,7 @@
 
 
     <!-- PROJECTS -->
+
     <section id="projects">
 
         <h2 class="section-title">
@@ -914,33 +810,17 @@
         </h2>
 
         <p class="section-subtitle">
-            Things I'm building while learning
+            Things I am building and learning from
         </p>
 
 
         <div class="projects-container">
 
-            <!-- CODEFIX AI -->
-            <div class="main-project">
-
-                <div class="project-header">
-
-                    <div class="project-badge">
-                        🚧 CURRENT PROJECT
-                    </div>
-
-                    <h3>CodeFix AI</h3>
-
-                    <p>
-                        AI-Powered Coding Error Assistant
-                    </p>
-
-                </div>
-
+            <div class="codefix-project">
 
                 <!-- STEP 1 -->
-                <div class="project-step"
-                     onclick="showProjectStep(1)">
+
+                <div class="project-step" onclick="showStep(1)">
 
                     <div class="step-number">
                         01
@@ -948,12 +828,14 @@
 
                     <div class="step-content">
 
-                        <h4>🎯 The Problem</h4>
+                        <h3>
+                            The Problem
+                        </h3>
 
                         <p>
-                            Beginners often face coding errors but don't
-                            always understand what the error means, where
-                            it happened or how to fix it.
+                            Beginner developers often face coding errors but
+                            don't understand what the error means or how to
+                            fix it.
                         </p>
 
                     </div>
@@ -966,9 +848,10 @@
 
 
                 <!-- STEP 2 -->
+
                 <div class="project-step hidden-step"
-                     id="projectStep2"
-                     onclick="showProjectStep(2)">
+                     id="step2"
+                     onclick="showStep(2)">
 
                     <div class="step-number">
                         02
@@ -976,18 +859,15 @@
 
                     <div class="step-content">
 
-                        <h4>💡 Our Solution</h4>
+                        <h3>
+                            Our Solution — CodeFix AI
+                        </h3>
 
                         <p>
-                            CodeFix AI is a beginner-friendly web application
-                            designed to help students and new developers
-                            understand coding errors in simple language.
-                        </p>
-
-                        <p style="margin-top:10px;">
-                            Users can paste their code, select a programming
-                            language and get an explanation of the error
-                            along with guidance to fix it.
+                            CodeFix AI is a beginner-friendly AI-powered web
+                            application designed to help students and new
+                            developers understand coding errors in simple
+                            language.
                         </p>
 
                     </div>
@@ -1000,9 +880,10 @@
 
 
                 <!-- STEP 3 -->
+
                 <div class="project-step hidden-step"
-                     id="projectStep3"
-                     onclick="showProjectStep(3)">
+                     id="step3"
+                     onclick="showStep(3)">
 
                     <div class="step-number">
                         03
@@ -1010,14 +891,16 @@
 
                     <div class="step-content">
 
-                        <h4>⚙️ How It Works</h4>
+                        <h3>
+                            How It Works
+                        </h3>
 
                         <ul>
                             <li>Paste your code</li>
                             <li>Select the programming language</li>
                             <li>Click "Find Error"</li>
                             <li>Understand what went wrong</li>
-                            <li>Get guidance for fixing the problem</li>
+                            <li>Get guidance for fixing the error</li>
                         </ul>
 
                     </div>
@@ -1030,9 +913,10 @@
 
 
                 <!-- STEP 4 -->
+
                 <div class="project-step hidden-step"
-                     id="projectStep4"
-                     onclick="showProjectStep(4)">
+                     id="step4"
+                     onclick="showStep(4)">
 
                     <div class="step-number">
                         04
@@ -1040,13 +924,15 @@
 
                     <div class="step-content">
 
-                        <h4>👥 Who Can Use It?</h4>
+                        <h3>
+                            Who Can Use It?
+                        </h3>
 
                         <ul>
                             <li>Students learning programming</li>
                             <li>Beginner developers</li>
-                            <li>People practising coding problems</li>
-                            <li>Anyone trying to understand common errors</li>
+                            <li>People practicing coding problems</li>
+                            <li>Anyone trying to understand coding errors</li>
                         </ul>
 
                     </div>
@@ -1059,9 +945,10 @@
 
 
                 <!-- STEP 5 -->
+
                 <div class="project-step hidden-step"
-                     id="projectStep5"
-                     onclick="showProjectStep(5)">
+                     id="step5"
+                     onclick="showStep(5)">
 
                     <div class="step-number">
                         05
@@ -1069,16 +956,18 @@
 
                     <div class="step-content">
 
-                        <h4>🟡 Current Status</h4>
+                        <h3>
+                            Current Status
+                        </h3>
 
-                        <p class="status">
-                            🟡 In Process
+                        <p class="status-text">
+                            🟡 <strong>In Process</strong>
                         </p>
 
-                        <p style="margin-top:8px;">
-                            CodeFix AI is currently under development.
-                            The team is working on its design, features
-                            and AI-based functionality step by step.
+                        <p>
+                            CodeFix AI is currently under development. We are
+                            working on its design, features and AI-based
+                            functionality step by step.
                         </p>
 
                     </div>
@@ -1091,8 +980,9 @@
 
 
                 <!-- STEP 6 -->
+
                 <div class="project-step hidden-step"
-                     id="projectStep6">
+                     id="step6">
 
                     <div class="step-number">
                         06
@@ -1100,53 +990,44 @@
 
                     <div class="step-content">
 
-                        <h4>🚀 Future Plans</h4>
+                        <h3>
+                            Future Plans
+                        </h3>
 
                         <ul>
                             <li>Support more programming languages</li>
                             <li>Improve error explanations</li>
                             <li>Add better code suggestions</li>
-                            <li>Create a smoother user experience</li>
+                            <li>Improve the user interface</li>
                             <li>Add more AI-powered features</li>
                         </ul>
 
-                        <p class="future" style="margin-top:12px;">
-                            The goal is to make debugging easier and help
-                            beginners learn from their coding mistakes.
-                        </p>
+                        <a
+                            href="https://github.com/lakshkalantri12"
+                            target="_blank"
+                            class="github-btn"
+                        >
+                            🐙 View GitHub
+                        </a>
 
                     </div>
-
-                </div>
-
-
-                <div style="text-align:center; margin-top:25px;">
-
-                    <a
-                        href="https://github.com/lakshkalantri12"
-                        target="_blank"
-                        class="btn btn-outline">
-                        🐙 View GitHub
-                    </a>
 
                 </div>
 
             </div>
 
 
-            <!-- PORTFOLIO PROJECT -->
+            <!-- OTHER PROJECT -->
+
             <div class="other-project">
 
-                <h3>🌐 Portfolio Website</h3>
+                <h3>
+                    🌐 Portfolio Website
+                </h3>
 
                 <p>
-                    A personal portfolio website created to showcase my
-                    skills, projects, learning journey and future work.
-                </p>
-
-                <p>
-                    This website itself is one of my learning projects,
-                    and I will continue improving it as I learn new things.
+                    My personal portfolio website where I showcase my skills,
+                    projects, learning journey and contact details.
                 </p>
 
             </div>
@@ -1156,7 +1037,8 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- CONTACT DETAILS -->
+
     <section id="contact">
 
         <h2 class="section-title">
@@ -1164,32 +1046,86 @@
         </h2>
 
         <p class="section-subtitle">
-            Let's connect
+            You can connect with me through the options below
         </p>
+
 
         <div class="contact-container">
 
-            <p>
-                I'm always interested in learning, building projects
-                and connecting with other students and developers.
-            </p>
+            <div class="contact-grid">
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:kalantrilaksh0@gmail.com"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        📧
+                    </div>
+
+                    <h3>
+                        Gmail
+                    </h3>
+
+                    <p>
+                        kalantrilaksh0@gmail.com
+                    </p>
+
+                </a>
 
 
-            <div class="contact-box">
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/lakshkalantri12"
+                    target="_blank"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        🐙
+                    </div>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        View my GitHub profile
+                    </p>
+
+                </a>
+
 
                 <!-- PHONE -->
-                <div class="contact-item">
 
-                    <button onclick="showPhone()">
-                        📱 Phone Number
-                    </button>
+                <div
+                    class="contact-card phone"
+                    onclick="showPhone(this)"
+                >
 
-                    <div
-                        id="phoneNumber"
-                        class="phone-number hidden-contact">
+                    <div class="contact-icon">
+                        📱
+                    </div>
 
-                        <a href="tel:+919270229887">
-                            9270229887
+                    <h3>
+                        Phone Number
+                    </h3>
+
+                    <p>
+                        Click to view number
+                    </p>
+
+                    <div class="contact-number">
+
+                        <a
+                            href="tel:+919270229887"
+                            class="call-link"
+                            onclick="event.stopPropagation();"
+                        >
+                            📞 +91 9270229887
                         </a>
 
                     </div>
@@ -1198,18 +1134,26 @@
 
 
                 <!-- WHATSAPP -->
-                <div class="contact-item">
 
-                    <a
-                        class="whatsapp-link"
-                        href="https://wa.me/919270229887"
-                        target="_blank">
+                <a
+                    href="https://wa.me/919270229887"
+                    target="_blank"
+                    class="contact-card"
+                >
 
-                        💬 WhatsApp
+                    <div class="contact-icon">
+                        💬
+                    </div>
 
-                    </a>
+                    <h3>
+                        WhatsApp
+                    </h3>
 
-                </div>
+                    <p>
+                        Click to chat with me
+                    </p>
+
+                </a>
 
             </div>
 
@@ -1219,16 +1163,16 @@
 
 
     <!-- FOOTER -->
+
     <footer>
 
-        <p>
-            © 2026 Laksh Kalantri | Built while learning 🚀
-        </p>
+        © 2026 Laksh Kalantri. All Rights Reserved.
 
     </footer>
 
 
     <!-- JAVASCRIPT -->
+
     <script>
 
         /* SKILLS */
@@ -1242,12 +1186,12 @@
 
         /* PROJECT STEPS */
 
-        function showProjectStep(step) {
+        function showStep(step) {
 
             if (step === 1) {
 
                 document
-                    .getElementById("projectStep2")
+                    .getElementById("step2")
                     .classList.remove("hidden-step");
 
             }
@@ -1255,7 +1199,7 @@
             else if (step === 2) {
 
                 document
-                    .getElementById("projectStep3")
+                    .getElementById("step3")
                     .classList.remove("hidden-step");
 
             }
@@ -1263,7 +1207,7 @@
             else if (step === 3) {
 
                 document
-                    .getElementById("projectStep4")
+                    .getElementById("step4")
                     .classList.remove("hidden-step");
 
             }
@@ -1271,7 +1215,7 @@
             else if (step === 4) {
 
                 document
-                    .getElementById("projectStep5")
+                    .getElementById("step5")
                     .classList.remove("hidden-step");
 
             }
@@ -1279,7 +1223,7 @@
             else if (step === 5) {
 
                 document
-                    .getElementById("projectStep6")
+                    .getElementById("step6")
                     .classList.remove("hidden-step");
 
             }
@@ -1289,11 +1233,9 @@
 
         /* PHONE NUMBER */
 
-        function showPhone() {
+        function showPhone(card) {
 
-            document
-                .getElementById("phoneNumber")
-                .classList.toggle("hidden-contact");
+            card.classList.toggle("active");
 
         }
 
