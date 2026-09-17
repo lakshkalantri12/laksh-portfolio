@@ -415,11 +415,44 @@
             border-radius: 15px;
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.08);
+            cursor: pointer;
+            transition: 0.3s;
         }
 
-        .contact-item a {
+        .contact-item:hover {
+            transform: translateY(-3px);
+            border-color: #4da6ff;
+        }
+
+        .contact-item button {
+            background: none;
+            border: none;
+            color: #4da6ff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hidden-contact {
+            display: none;
+        }
+
+        .phone-number {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        .phone-number a {
             color: #4da6ff;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        .whatsapp-link {
+            color: #4da6ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
         }
 
         /* FOOTER */
@@ -542,6 +575,7 @@
             </p>
 
             <div class="hero-buttons">
+
                 <a href="#projects" class="btn btn-primary">
                     View My Projects
                 </a>
@@ -549,6 +583,7 @@
                 <a href="#contact" class="btn btn-outline">
                     Contact Me
                 </a>
+
             </div>
 
         </div>
@@ -1125,7 +1160,7 @@
     <section id="contact">
 
         <h2 class="section-title">
-            Contact <span>Me</span>
+            Contact <span>Details</span>
         </h2>
 
         <p class="section-subtitle">
@@ -1139,22 +1174,41 @@
                 and connecting with other students and developers.
             </p>
 
+
             <div class="contact-box">
 
+                <!-- PHONE -->
                 <div class="contact-item">
-                    📧
-                    <a href="mailto:kalantrilaksh0@gmail.com">
-                        Email Me
-                    </a>
+
+                    <button onclick="showPhone()">
+                        📱 Phone Number
+                    </button>
+
+                    <div
+                        id="phoneNumber"
+                        class="phone-number hidden-contact">
+
+                        <a href="tel:+919270229887">
+                            9270229887
+                        </a>
+
+                    </div>
+
                 </div>
 
+
+                <!-- WHATSAPP -->
                 <div class="contact-item">
-                    🐙
+
                     <a
-                        href="https://github.com/lakshkalantri12"
+                        class="whatsapp-link"
+                        href="https://wa.me/919270229887"
                         target="_blank">
-                        GitHub
+
+                        💬 WhatsApp
+
                     </a>
+
                 </div>
 
             </div>
@@ -1178,6 +1232,7 @@
     <script>
 
         /* SKILLS */
+
         function toggleSkill(card) {
 
             card.classList.toggle("active");
@@ -1186,6 +1241,7 @@
 
 
         /* PROJECT STEPS */
+
         function showProjectStep(step) {
 
             if (step === 1) {
@@ -1227,6 +1283,17 @@
                     .classList.remove("hidden-step");
 
             }
+
+        }
+
+
+        /* PHONE NUMBER */
+
+        function showPhone() {
+
+            document
+                .getElementById("phoneNumber")
+                .classList.toggle("hidden-contact");
 
         }
 
